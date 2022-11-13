@@ -114,6 +114,8 @@ func getLen() int {
 }
 
 func maino() {
+	// ghjdrr
 	k, _ := getPairs()
-	fmt.Println(k)
+	s := getLen()
+	fmt.Println(k, s)
 }
