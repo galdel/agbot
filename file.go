@@ -112,10 +112,3 @@ func getLen() int {
 	}
 	return len(words)
 }
-
-func maino() {
-	// ghjdrr
-	k, _ := getPairs()
-	s := getLen()
-	fmt.Println(k, s)
-}
