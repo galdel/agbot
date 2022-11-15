@@ -57,7 +57,7 @@ func getPair() func() (string, string) {
 	var counter int
 	var first string
 	var second string
-	words, err := openFile("/home/ag/src/agbot/words.txt")
+	words, err := openFile("/home/ag/src/agbot/word.txt")
 	rand.Seed(time.Now().UnixNano())
 	rand.Shuffle(len(words), func(i, j int) {
 		words[i], words[j] = words[j], words[i]
@@ -87,7 +87,7 @@ func getPair() func() (string, string) {
 }
 
 func getPairs() (pairs [][2]string, err error) {
-	words, err := openFile("/home/ag/src/agbot/words.txt")
+	words, err := openFile("/home/ag/src/agbot/word.txt")
 	rand.Seed(time.Now().UnixNano())
 	rand.Shuffle(len(words), func(i, j int) {
 		words[i], words[j] = words[j], words[i]
@@ -106,7 +106,7 @@ func getPairs() (pairs [][2]string, err error) {
 }
 
 func getLen() int {
-	words, err := openFile("/home/ag/src/agbot/words.txt")
+	words, err := openFile("/home/ag/src/agbot/word.txt")
 	if err != nil {
 		return 0
 	}
