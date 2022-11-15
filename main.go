@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"strings"
 	"time"
@@ -18,7 +17,7 @@ func main() {
 		if err != nil {
 			log.Println(err.Error())
 		}
-		fmt.Println(updates)
+		//fmt.Println(updates)
 		if len(updates) == 0 {
 			time.Sleep(1000)
 		} else {
