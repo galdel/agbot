@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-func main() {
+func main1() {
 	offset := 0
 	status := make(map[int]int)
 	words := make(map[int][][2]string)
