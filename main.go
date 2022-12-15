@@ -86,6 +86,7 @@ func start(chat_id int, text string) {
 			status = 0
 			step = 0
 			updateStatus(chat_id, text, status, step)
+			updatePairsAndSaveToBase(chat_id)
 		}
 
 	}

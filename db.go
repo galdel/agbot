@@ -131,13 +131,13 @@ func updatePairsAndSaveToBase(chat_id int) error {
 	})
 	for i, word := range words {
 		if rand.Intn(2) == 1 {
-			_, err = db.Exec("insert into words (chat_id, step, first_word, second_word) values ($1, $2, $3 , $4)", chat_id, i, word.eng, word.rus)
+			_, err = db.Exec("UPDATE words SET chat_id = $1, first_word = $2, second_word = $3 WHERE step= $4", chat_id, word.eng, word.rus, i)
 			if err != nil {
 				return err
 			}
 
 		} else {
-			_, err = db.Exec("insert into words (chat_id, step, first_word, second_word) values ($1, $2, $3 , $4)", chat_id, i, word.rus, word.eng)
+			_, err = db.Exec("UPDATE words SET chat_id = $1, first_word = $2, second_word = $3 WHERE step= $4", chat_id, word.rus, word.eng, i)
 			if err != nil {
 				return err
 			}
