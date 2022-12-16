@@ -96,7 +96,7 @@ func getPairsAndSaveToBase(chat_id int) error {
 		return err
 	}
 	defer db.Close()
-	words, err := openFile("words.txt")
+	words, err := openFile("/home/ag/go/src/agbot/words.txt")
 	rand.Seed(time.Now().UnixNano())
 	rand.Shuffle(len(words), func(i, j int) {
 		words[i], words[j] = words[j], words[i]
@@ -124,7 +124,7 @@ func updatePairsAndSaveToBase(chat_id int) error {
 		return err
 	}
 	defer db.Close()
-	words, err := openFile("words.txt")
+	words, err := openFile("/home/ag/go/src/agbot/words.txt")
 	rand.Seed(time.Now().UnixNano())
 	rand.Shuffle(len(words), func(i, j int) {
 		words[i], words[j] = words[j], words[i]
